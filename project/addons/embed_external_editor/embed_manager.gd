@@ -58,7 +58,7 @@ func update_size():
 
 
 func update_visible():
-	var new_visible = script_editor.visible
+	var new_visible = script_editor.is_visible_in_tree()
 	var visibility_changed = embedded.set_visible(new_visible)
 	if visibility_changed:
 		embed_visible_changed.emit(new_visible)
